@@ -332,6 +332,9 @@ Reset_Handler:
     ldr   r0,=SystemInit
     blx   r0
 #endif
+/* Call uvisor_init() */
+    ldr   r0, =uvisor_init
+    blx   r0
 /*     Loop to copy data from read only memory to RAM. The ranges
  *      of copy from/to are specified by following symbols evaluated in
  *      linker script.
