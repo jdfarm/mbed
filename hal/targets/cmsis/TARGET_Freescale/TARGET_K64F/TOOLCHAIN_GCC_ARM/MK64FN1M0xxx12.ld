@@ -90,7 +90,11 @@ SECTIONS
   } > m_flash_config
 
   /* The program code and other data goes into internal flash */
-  .text :
+  /* Note: The .text section must be aligned to 4 bytes. If the alignment is not
+   *       specified the section inherits the highest possible alignment from
+   *       its elements, which makes the position of __uvisor_main_start
+   *       non-deterministic. */
+  .text ALIGN(4) :
   {
     /* uVisor code and data */
     . = ALIGN(4);
