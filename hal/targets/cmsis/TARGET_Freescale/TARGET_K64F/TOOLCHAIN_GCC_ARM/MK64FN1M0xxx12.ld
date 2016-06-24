@@ -224,6 +224,12 @@ SECTIONS
     __uvisor_bss_boxes_end = .;
 
     . = ALIGN(32);
+    __uvisor_bss_end_padding_max = (2 << (LOG2CEIL(. - ORIGIN(m_data)) - 1)) / 8;
+    . = MIN(
+          __uvisor_bss_end_padding_max * (((. - ORIGIN(m_data)) / __uvisor_bss_end_padding_max) +
+          MIN((. - ORIGIN(m_data)) % __uvisor_bss_end_padding_max, 1)) - __UVISOR_SRAM_OFFSET,
+          ORIGIN(m_data) + LENGTH(m_data)
+        );
     __uvisor_bss_end = .;
   } > m_data
 
