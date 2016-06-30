@@ -77,6 +77,9 @@ rsync:
 	#
 	# Copying licenses
 	cp $(UVISOR_DIR)/LICENSE* $(TARGET_SUPPORTED)
+	#
+	# Copying documentation...
+	cp $(UVISOR_DIR)/docs/QUICKSTART.md $(TARGET_PREFIX)/README.md
 
 TARGET_M%: $(TARGET_SUPPORTED)/*/*/*_m%_*.a
 	@printf "#\n# Copying $@ files...\n"
