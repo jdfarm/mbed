@@ -44,6 +44,8 @@
 #ifdef FEATURE_UVISOR
 #include "uvisor-lib.h"
 
+extern uint32_t main_cfg_ptr;
+
 /* Secure uVisor implementation. */
 
 /** Set the value at the target address.

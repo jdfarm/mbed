@@ -504,7 +504,12 @@ extern uint32_t __StackTop[];
 #define INITIAL_SP            (0x20008000UL)
 
 #elif defined(TARGET_EFM32GG_STK3700) || defined(TARGET_BEETLE)
+#if defined(FEATURE_UVISOR) && defined(TARGET_UVISOR_SUPPORTED)
+extern uint32_t __StackTop[];
+#define INITIAL_SP            (__StackTop)
+#else
 #define INITIAL_SP            (0x20020000UL)
+#endif
 
 #elif defined(TARGET_EFM32HG_STK3400)
 #define INITIAL_SP            (0x20002000UL)
