@@ -14,6 +14,15 @@
         "default_build": "standard",
         "release": false
     },
+    "ARCHEX": {
+        "inherits": ["Target"],
+        "core": "Cortex-M3",
+        "extra_labels": ["ARM_RSH"],
+        "supported_toolchains": ["GCC_ARM", "ARM", "uARM"],
+        "device_has": ["ANALOGIN", "ANALOGOUT", "ERROR_PATTERN", "I2C", "I2CSLAVE", "I2C_ASYNCH", "INTERRUPTIN", "LOWPOWERTIMER", "PORTIN", "PORTINOUT", "PORTOUT", "PWMOUT", "RTC", "SERIAL", "SERIAL_ASYNCH", "SLEEP", "SPI", "SPISLAVE", "SPI_ASYNCH", "STDIO_MESSAGES"],
+        "forced_reset_timeout": 2,
+        "release": false
+    },
     "CM4_UARM": {
         "inherits": ["Target"],
         "core": "Cortex-M4",
