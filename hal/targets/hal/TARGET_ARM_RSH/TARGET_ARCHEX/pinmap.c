@@ -23,7 +23,6 @@
 
 #include "pinmap.h"
 #include "em_gpio.h"
-#include "em_cmu.h"
 #include "mbed_assert.h"
 
 static int gpio_clock_inited = 0;
@@ -39,7 +38,7 @@ void pin_mode(PinName pin, PinMode mode)
 
     /* Enable GPIO clock if not already done */
     if (!gpio_clock_inited) {
-        CMU_ClockEnable(cmuClock_GPIO, true);
+       // CMU_ClockEnable(cmuClock_GPIO, true);
         gpio_clock_inited = 1;
     }
 

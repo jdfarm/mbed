@@ -190,78 +190,8 @@ typedef enum IRQn
 
 /* Part number capabilities */
 
-#define LETIMER_PRESENT       /**< LETIMER is available in this part */
-#define LETIMER_COUNT       1 /**< 1 LETIMERs available  */
-#define USART_PRESENT         /**< USART is available in this part */
-#define USART_COUNT         3 /**< 3 USARTs available  */
-#define UART_PRESENT          /**< UART is available in this part */
-#define UART_COUNT          2 /**< 2 UARTs available  */
-#define TIMER_PRESENT         /**< TIMER is available in this part */
-#define TIMER_COUNT         4 /**< 4 TIMERs available  */
-#define ACMP_PRESENT          /**< ACMP is available in this part */
-#define ACMP_COUNT          2 /**< 2 ACMPs available  */
-#define I2C_PRESENT           /**< I2C is available in this part */
-#define I2C_COUNT           2 /**< 2 I2Cs available  */
-#define LEUART_PRESENT        /**< LEUART is available in this part */
-#define LEUART_COUNT        2 /**< 2 LEUARTs available  */
-#define PCNT_PRESENT          /**< PCNT is available in this part */
-#define PCNT_COUNT          3 /**< 3 PCNTs available  */
-#define ADC_PRESENT           /**< ADC is available in this part */
-#define ADC_COUNT           1 /**< 1 ADCs available  */
-#define DAC_PRESENT           /**< DAC is available in this part */
-#define DAC_COUNT           1 /**< 1 DACs available  */
-#define DMA_PRESENT
-#define DMA_COUNT           1
-#define AES_PRESENT
-#define AES_COUNT           1
-#define USBC_PRESENT
-#define USBC_COUNT          1
-#define USB_PRESENT
-#define USB_COUNT           1
-#define LE_PRESENT
-#define LE_COUNT            1
-#define MSC_PRESENT
-#define MSC_COUNT           1
-#define EMU_PRESENT
-#define EMU_COUNT           1
-#define RMU_PRESENT
-#define RMU_COUNT           1
-#define CMU_PRESENT
-#define CMU_COUNT           1
-#define LESENSE_PRESENT
-#define LESENSE_COUNT       1
-#define RTC_PRESENT
-#define RTC_COUNT           1
-#define EBI_PRESENT
-#define EBI_COUNT           1
 #define GPIO_PRESENT
 #define GPIO_COUNT          1
-#define VCMP_PRESENT
-#define VCMP_COUNT          1
-#define PRS_PRESENT
-#define PRS_COUNT           1
-#define OPAMP_PRESENT
-#define OPAMP_COUNT         1
-#define BU_PRESENT
-#define BU_COUNT            1
-#define LCD_PRESENT
-#define LCD_COUNT           1
-#define BURTC_PRESENT
-#define BURTC_COUNT         1
-#define HFXTAL_PRESENT
-#define HFXTAL_COUNT        1
-#define LFXTAL_PRESENT
-#define LFXTAL_COUNT        1
-#define WDOG_PRESENT
-#define WDOG_COUNT          1
-#define DBG_PRESENT
-#define DBG_COUNT           1
-#define ETM_PRESENT
-#define ETM_COUNT           1
-#define BOOTLOADER_PRESENT
-#define BOOTLOADER_COUNT    1
-#define ANALOG_PRESENT
-#define ANALOG_COUNT        1
 
 #include "core_cm3.h"       /* Cortex-M3 processor and core peripherals */
 #include "system_efm32gg.h" /* System Header */
@@ -274,47 +204,8 @@ typedef enum IRQn
  * @brief Device Specific Peripheral Register Structures
  *****************************************************************************/
 
-#include "efm32gg_dma_ch.h"
-#include "efm32gg_dma.h"
-#include "efm32gg_aes.h"
-#include "efm32gg_usb_hc.h"
-#include "efm32gg_usb_diep.h"
-#include "efm32gg_usb_doep.h"
-#include "efm32gg_usb.h"
-#include "efm32gg_msc.h"
-#include "efm32gg_emu.h"
-#include "efm32gg_rmu.h"
-#include "efm32gg_cmu.h"
-#include "efm32gg_lesense_st.h"
-#include "efm32gg_lesense_buf.h"
-#include "efm32gg_lesense_ch.h"
-#include "efm32gg_lesense.h"
-#include "efm32gg_rtc.h"
-#include "efm32gg_letimer.h"
-#include "efm32gg_ebi.h"
-#include "efm32gg_usart.h"
-#include "efm32gg_timer_cc.h"
-#include "efm32gg_timer.h"
-#include "efm32gg_acmp.h"
-#include "efm32gg_i2c.h"
 #include "efm32gg_gpio_p.h"
 #include "efm32gg_gpio.h"
-#include "efm32gg_vcmp.h"
-#include "efm32gg_prs_ch.h"
-#include "efm32gg_prs.h"
-#include "efm32gg_leuart.h"
-#include "efm32gg_pcnt.h"
-#include "efm32gg_adc.h"
-#include "efm32gg_dac.h"
-#include "efm32gg_lcd.h"
-#include "efm32gg_burtc_ret.h"
-#include "efm32gg_burtc.h"
-#include "efm32gg_wdog.h"
-#include "efm32gg_etm.h"
-#include "efm32gg_dma_descriptor.h"
-#include "efm32gg_devinfo.h"
-#include "efm32gg_romtable.h"
-#include "efm32gg_calibrate.h"
 
 /** @} End of group EFM32GG990F1024_Peripheral_TypeDefs */
 
@@ -374,47 +265,7 @@ typedef enum IRQn
  * @{
  *****************************************************************************/
 
-#define DMA          ((DMA_TypeDef *) DMA_BASE)             /**< DMA base pointer */
-#define AES          ((AES_TypeDef *) AES_BASE)             /**< AES base pointer */
-#define USB          ((USB_TypeDef *) USB_BASE)             /**< USB base pointer */
-#define MSC          ((MSC_TypeDef *) MSC_BASE)             /**< MSC base pointer */
-#define EMU          ((EMU_TypeDef *) EMU_BASE)             /**< EMU base pointer */
-#define RMU          ((RMU_TypeDef *) RMU_BASE)             /**< RMU base pointer */
-#define CMU          ((CMU_TypeDef *) CMU_BASE)             /**< CMU base pointer */
-#define LESENSE      ((LESENSE_TypeDef *) LESENSE_BASE)     /**< LESENSE base pointer */
-#define RTC          ((RTC_TypeDef *) RTC_BASE)             /**< RTC base pointer */
-#define LETIMER0     ((LETIMER_TypeDef *) LETIMER0_BASE)    /**< LETIMER0 base pointer */
-#define EBI          ((EBI_TypeDef *) EBI_BASE)             /**< EBI base pointer */
-#define USART0       ((USART_TypeDef *) USART0_BASE)        /**< USART0 base pointer */
-#define USART1       ((USART_TypeDef *) USART1_BASE)        /**< USART1 base pointer */
-#define USART2       ((USART_TypeDef *) USART2_BASE)        /**< USART2 base pointer */
-#define UART0        ((USART_TypeDef *) UART0_BASE)         /**< UART0 base pointer */
-#define UART1        ((USART_TypeDef *) UART1_BASE)         /**< UART1 base pointer */
-#define TIMER0       ((TIMER_TypeDef *) TIMER0_BASE)        /**< TIMER0 base pointer */
-#define TIMER1       ((TIMER_TypeDef *) TIMER1_BASE)        /**< TIMER1 base pointer */
-#define TIMER2       ((TIMER_TypeDef *) TIMER2_BASE)        /**< TIMER2 base pointer */
-#define TIMER3       ((TIMER_TypeDef *) TIMER3_BASE)        /**< TIMER3 base pointer */
-#define ACMP0        ((ACMP_TypeDef *) ACMP0_BASE)          /**< ACMP0 base pointer */
-#define ACMP1        ((ACMP_TypeDef *) ACMP1_BASE)          /**< ACMP1 base pointer */
-#define I2C0         ((I2C_TypeDef *) I2C0_BASE)            /**< I2C0 base pointer */
-#define I2C1         ((I2C_TypeDef *) I2C1_BASE)            /**< I2C1 base pointer */
 #define GPIO         ((GPIO_TypeDef *) GPIO_BASE)           /**< GPIO base pointer */
-#define VCMP         ((VCMP_TypeDef *) VCMP_BASE)           /**< VCMP base pointer */
-#define PRS          ((PRS_TypeDef *) PRS_BASE)             /**< PRS base pointer */
-#define LEUART0      ((LEUART_TypeDef *) LEUART0_BASE)      /**< LEUART0 base pointer */
-#define LEUART1      ((LEUART_TypeDef *) LEUART1_BASE)      /**< LEUART1 base pointer */
-#define PCNT0        ((PCNT_TypeDef *) PCNT0_BASE)          /**< PCNT0 base pointer */
-#define PCNT1        ((PCNT_TypeDef *) PCNT1_BASE)          /**< PCNT1 base pointer */
-#define PCNT2        ((PCNT_TypeDef *) PCNT2_BASE)          /**< PCNT2 base pointer */
-#define ADC0         ((ADC_TypeDef *) ADC0_BASE)            /**< ADC0 base pointer */
-#define DAC0         ((DAC_TypeDef *) DAC0_BASE)            /**< DAC0 base pointer */
-#define LCD          ((LCD_TypeDef *) LCD_BASE)             /**< LCD base pointer */
-#define BURTC        ((BURTC_TypeDef *) BURTC_BASE)         /**< BURTC base pointer */
-#define WDOG         ((WDOG_TypeDef *) WDOG_BASE)           /**< WDOG base pointer */
-#define ETM          ((ETM_TypeDef *) ETM_BASE)             /**< ETM base pointer */
-#define CALIBRATE    ((CALIBRATE_TypeDef *) CALIBRATE_BASE) /**< CALIBRATE base pointer */
-#define DEVINFO      ((DEVINFO_TypeDef *) DEVINFO_BASE)     /**< DEVINFO base pointer */
-#define ROMTABLE     ((ROMTABLE_TypeDef *) ROMTABLE_BASE)   /**< ROMTABLE base pointer */
 
 /** @} End of group EFM32GG990F1024_Peripheral_Declaration */
 
@@ -423,10 +274,6 @@ typedef enum IRQn
  * @{
  *****************************************************************************/
 
-#include "efm32gg_prs_signals.h"
-#include "efm32gg_dmareq.h"
-#include "efm32gg_dmactrl.h"
-#include "efm32gg_uart.h"
 
 /**************************************************************************//**
  * @defgroup EFM32GG990F1024_UNLOCK EFM32GG990F1024 Unlock Codes
@@ -448,8 +295,6 @@ typedef enum IRQn
  * @{
  *****************************************************************************/
 
-#include "efm32gg_af_ports.h"
-#include "efm32gg_af_pins.h"
 
 /** @} End of group EFM32GG990F1024_Alternate_Function */
 

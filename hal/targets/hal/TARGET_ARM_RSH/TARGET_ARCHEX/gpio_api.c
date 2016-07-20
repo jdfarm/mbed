@@ -23,9 +23,7 @@
 
 #include "gpio_api.h"
 #include "pinmap.h"
-#include "em_cmu.h"
 #include "mbed_assert.h"
-#include "sleepmodes.h"
 
 
 void gpio_write(gpio_t *obj, int value)
@@ -66,8 +64,8 @@ void gpio_init(gpio_t *obj, PinName pin)
 {
     MBED_ASSERT(pin != NC);
 
-    CMU_ClockEnable(cmuClock_HFPER, true);
-    CMU_ClockEnable(cmuClock_GPIO, true);
+   // CMU_ClockEnable(cmuClock_HFPER, true);
+    //CMU_ClockEnable(cmuClock_GPIO, true);
     obj->pin = pin;
 }
 

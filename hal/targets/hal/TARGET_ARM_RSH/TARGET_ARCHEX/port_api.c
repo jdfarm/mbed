@@ -28,7 +28,6 @@
 #include "pinmap.h"
 #include "gpio_api.h"
 #include "em_gpio.h"
-#include "em_cmu.h"
 
 #define PORT_NUM_PINS 16
 

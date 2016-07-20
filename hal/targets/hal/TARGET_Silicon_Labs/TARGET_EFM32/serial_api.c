@@ -22,7 +22,6 @@
  ******************************************************************************/
 
 #include "device.h"
-#include "clocking.h"
 #if DEVICE_SERIAL
 
 #include "mbed_assert.h"
@@ -36,15 +35,7 @@
 #include "PeripheralPins.h"
 #include "PeripheralNames.h"
 
-#include "em_usart.h"
-#include "em_leuart.h"
-#include "em_cmu.h"
-#include "em_dma.h"
-#include "dma_api_HAL.h"
-#include "dma_api.h"
-#include "sleep_api.h"
 #include "buffer.h"
-#include "sleepmodes.h"
 
 #define SERIAL_LEAST_ACTIVE_SLEEPMODE EM1
 #define SERIAL_LEAST_ACTIVE_SLEEPMODE_LEUART EM2

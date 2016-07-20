@@ -27,10 +27,6 @@
 #include "PinNames.h"
 #include "PeripheralNames.h"
 #include "PortNames.h"
-#include "em_i2c.h"
-#include "em_dma.h"
-#include "em_cmu.h"
-#include "dma_api_HAL.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -92,7 +88,7 @@ struct gpio_irq_s {
 
 #if DEVICE_SERIAL
 struct serial_s {
-    union {
+	/*    union {
         USART_TypeDef *uart;
         LEUART_TypeDef *leuart;
     } periph;
@@ -109,7 +105,7 @@ struct serial_s {
     DMA_OPTIONS_t dmaOptionsTX;
     DMA_OPTIONS_t dmaOptionsRX;
 #endif
-    uint32_t sleep_blocked;
+uint32_t sleep_blocked;*/
 };
 #endif
 

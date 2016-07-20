@@ -261,6 +261,9 @@
 #elif defined(TARGET_MCU_NRF51822)
 #    define OS_CLOCK        32768
 
+#elif defined(TARGET_ARCHEX)
+#    define OS_CLOCK         1000
+
 #  else
 #    error "no target defined"
 #  endif
